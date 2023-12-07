@@ -26,6 +26,10 @@ body {
 
 }
 
+svg {
+  pointer-events: none;
+}
+
 @layer components {
   .active-enabled:not(:is(:is(.toggle-active, .tab-active, .active) .active-enabled)) {
     display: none !important;
@@ -92,6 +96,10 @@ body {
     @media (max-width:theme('screens.sm')) {
       font-size: 36px;
     }
+
+    @media (max-width:theme('screens.xs')) {
+      font-size: 30px;
+    }
   }
 
   .subtitle {
@@ -109,6 +117,18 @@ body {
 
     @media (max-width:theme('screens.md')) {
       font-size: 16px;
+    }
+  }
+
+
+  .btn-gradient {
+    background: linear-gradient(var(--button-gradient-deg, 118deg), #EF65A9 11.83%, rgba(0, 0, 0, 0) 89.55%), #265EFD;
+    color     : #fff;
+
+    @media(hover) {
+      &:hover {
+        background: linear-gradient(var(--button-gradient-deg, 118deg), #EF6565 11.83%, rgba(0, 0, 0, 0) 89.55%), #D610E8;
+      }
     }
   }
 }
@@ -148,6 +168,7 @@ body {
     font-size  : 36px;
     font-weight: 500;
     line-height: 1.1;
+    transition : opacity .5s;
 
     @media (max-width:theme('screens.xl')) {
       margin-top: 110px;
@@ -169,6 +190,7 @@ body {
     position  : relative;
     margin-top: -3px;
     text-align: center;
+    transition: opacity 1s .75s;
 
     @media (max-width:theme('screens.sm')) {
       margin-top: 4px;
@@ -373,6 +395,7 @@ body {
   &-snowflakes {
     position      : absolute;
     top           : 100px;
+    transition    : opacity 1s .75s;
     pointer-events: none;
 
     @media (max-width:theme('screens.sm')) {
@@ -382,6 +405,31 @@ body {
     svg {
       max-width: 100%;
     }
+  }
+
+  &-timer,
+  &-gnomes,
+  &-cloud,
+  &-snowman,
+  &-gifts,
+  &-logo {
+    transition: opacity 1s 1.5s;
+  }
+}
+
+body:not(.loaded) .started {
+  // temp
+
+  &-snowflakes,
+  &-title,
+  &-timer,
+  &-gnomes,
+  &-cloud,
+  &-subtitle,
+  &-snowman,
+  &-gifts,
+  &-logo {
+    opacity: 0;
   }
 }
 
@@ -474,6 +522,10 @@ body {
   padding-top   : 80px;
   padding-bottom: 60px;
 
+  background:
+    radial-gradient(circle at calc(100% + 500px) center, #BBFCF4 400px, rgba(0, 0, 0, 0) 700px),
+    radial-gradient(circle at -500px 500px, #E6D2FF 400px, rgba(0, 0, 0, 0) 700px);
+
   @media (max-width:theme('screens.md')) {
     padding-top   : 40px;
     padding-bottom: 40px;
@@ -512,6 +564,11 @@ body {
           left : auto;
         }
       }
+
+
+      img {
+        height: 120%;
+      }
     }
 
     &-content {
@@ -547,4 +604,339 @@ body {
     }
   }
 
+}
+
+.reviews {
+  padding: 50px 0;
+
+  &-title {
+    margin-bottom: 80px;
+
+    @media (max-width:theme('screens.sm')) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-slider {
+    width: 100%;
+
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+
+    .swiper-slide {
+      box-sizing: content-box;
+      width     : 394px;
+
+      @media (max-width:theme('screens.sm')) {
+        width: 300px;
+      }
+    }
+  }
+
+  &-item {
+    padding      : 48px 32px;
+    background   : #FDD;
+    border-radius: 20px;
+
+    @media (max-width:theme('screens.sm')) {
+      padding      : 32px 20px;
+      border-radius: 32px;
+    }
+  }
+}
+
+.feedback {
+  position      : relative;
+  overflow      : hidden;
+  padding-top   : 50px;
+  padding-bottom: 50px;
+  background    :
+    radial-gradient(circle at -400px center, #FFEFD7 300px, rgba(0, 0, 0, 0) 500px),
+    radial-gradient(circle at calc(100% + 400px) center, #FFCAF3 300px, rgba(0, 0, 0, 0) 500px);
+
+  &-title {
+    margin-bottom: 68px;
+
+    @media (max-width:theme('screens.sm')) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-snowflakes {
+    position      : absolute;
+    pointer-events: none;
+
+    &-1 {
+      top  : 20%;
+      right: calc(50% + 320px);
+    }
+
+    &-2 {
+      top : 20%;
+      left: calc(50% + 320px);
+    }
+  }
+
+  &-form {
+    width       : 478px;
+    max-width   : 100%;
+    margin-right: auto;
+    margin-left : auto;
+  }
+}
+
+.postcard {
+  padding-top   : 50px;
+  padding-bottom: 50px;
+
+  &-title {
+    margin-bottom: 80px;
+
+    @media (max-width:theme('screens.sm')) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-image {
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+    position      : relative;
+    height        : 620px;
+    overflow      : hidden;
+    padding-top   : 270px;
+    padding-right : 15px;
+    padding-left  : 15px;
+    background    : linear-gradient(104deg, #D7F0FF 0%, #E7F0FF 50.5%, #C9D8F1 100%);
+    border-radius : 20px;
+    text-align    : center;
+
+    @media (max-width:theme('screens.lg')) {
+      padding-top: 220px;
+    }
+
+    &-title {
+      font-family: var(--font-alt);
+      font-size  : 48px;
+      font-weight: 500;
+
+      @media (max-width:theme('screens.lg')) {
+        font-size: 40px;
+      }
+
+      @media (max-width:theme('screens.sm')) {
+        font-size: 32px;
+      }
+    }
+
+    &-subtitle {
+      font-weight: 600;
+    }
+
+    &-input {
+      width        : 478px;
+      max-width    : 100%;
+      background   : #FFF;
+      border       : 1px solid rgba(0, 0, 0, 0.10);
+      border-radius: 12px;
+
+      box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  &-snowflakes {
+    position: absolute;
+    inset   : 0;
+  }
+
+  &-top {
+    position: absolute;
+    top     : 0;
+    left    : calc(50% - 298px / 2);
+    width   : 298px;
+  }
+
+  &-left {
+    position: absolute;
+    bottom  : 0;
+    left    : 0;
+
+    @media (max-width:theme('screens.lg')) {
+      left: -150px;
+    }
+
+    @media (max-width:theme('screens.sm')) {
+      bottom: -100px;
+    }
+  }
+
+  &-right {
+    position: absolute;
+    right   : 0;
+    bottom  : 0;
+
+    @media (max-width:theme('screens.lg')) {
+      right: -150px;
+    }
+
+    @media (max-width:theme('screens.sm')) {
+      display: none;
+    }
+  }
+
+  &-bottom {
+    position: absolute;
+    bottom  : 0;
+  }
+
+  &-logo {
+    position: absolute;
+
+    &-1 {
+      top      : 36px;
+      left     : 36px;
+      transform: rotate(30deg);
+    }
+
+    &-2 {
+      top      : 100px;
+      right    : 100px;
+      transform: rotate(-15deg);
+    }
+
+    &-3 {
+      bottom   : 90px;
+      left     : calc(50% + 176px);
+      transform: rotate(-30deg);
+    }
+  }
+
+  &-dragon {
+    position: absolute;
+
+    &-1 {
+      top  : 76px;
+      right: 70%;
+    }
+
+    &-2 {
+      top : 162px;
+      left: 70%;
+    }
+  }
+}
+
+.footer {
+  display       : flex;
+  align-items   : center;
+  flex-direction: column;
+  position      : relative;
+  overflow      : hidden;
+  padding-top   : 50px;
+  padding-bottom: 680px;
+  background    :
+    radial-gradient(circle at -100px calc(100% + 300px), #FFCBCB 400px, rgba(0, 0, 0, 0) 700px),
+    radial-gradient(circle at calc(100% + 300px) calc(100% + 300px), #CBECFF 400px, rgba(0, 0, 0, 0) 700px);
+
+  @media (max-width:theme('screens.md')) {
+    padding-bottom: 500px;
+  }
+
+  &-snowflakes {
+    pointer-events: none;
+  }
+
+  &-tree {
+    position: absolute;
+    bottom  : 0;
+    left    : calc(50% - 979px / 2 + 48px);
+    width   : 979px;
+
+    @media (max-width:theme('screens.md')) {
+      left : calc(50% - 700px / 2 + 32px);
+      width: 700px;
+    }
+  }
+
+  &-snow {
+    position: absolute;
+    bottom  : 0;
+    left    : 0;
+
+    @media (max-width:theme('screens.md')) {
+      bottom: -40px;
+      width : 600px;
+    }
+  }
+
+  &-gnomes {
+    position: absolute;
+    right   : calc(50% + 180px);
+    bottom  : 20px;
+    width   : 580px;
+
+    @media (max-width:theme('screens.md')) {
+      right : calc(50% - 220px);
+      bottom: -65px;
+      width : 500px;
+
+    }
+
+    @media (max-width:theme('screens.sm')) {
+      right: calc(50% - 250px);
+    }
+
+    .gnome-snowflakes,
+    .gnome-background {
+      display: none;
+
+    }
+  }
+
+  &-santa {
+    position: absolute;
+    bottom  : 0;
+    left    : calc(50%);
+    width   : 371px;
+
+    @media (max-width:theme('screens.md')) {
+      left : calc(25%);
+      width: 280px;
+    }
+  }
+}
+
+.dialog-success {
+  width        : 500px;
+  max-width    : 100%;
+  padding      : 80px 15px 460px;
+  background   : url("../img/dialog-success.png") no-repeat center bottom / contain, #E4EBF5;
+  border-radius: 20px;
+
+  @media (max-width:theme('screens.sm')) {
+    padding-top   : 40px;
+    padding-bottom: 300px;
+  }
+
+  &-subtitle {
+    font-size  : 24px;
+    font-weight: 700;
+    text-align : center;
+
+    @media (max-width:theme('screens.lg')) {
+      font-size: 16px;
+    }
+  }
+
+  &-title {
+    margin-top   : -0.3em;
+    margin-bottom: -0.1em;
+    font-weight  : 500;
+    text-align   : center;
+
+    @media (max-width:theme('screens.sm')) {
+      font-size: 36px;
+    }
+  }
 }

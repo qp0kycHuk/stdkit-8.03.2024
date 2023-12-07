@@ -9,6 +9,10 @@ export function snowman() {
     smoothOrigin: false,
     transformOrigin: '50% 50%',
     duration: 1.1,
+    scrollTrigger: {
+      trigger: '.started',
+      toggleActions: 'play pause resume pause',
+    },
   }
 
   // left tree
@@ -277,6 +281,10 @@ export function snowman() {
         repeat: -1,
         delay: 'random(0, 3)',
         duration: 3,
+        scrollTrigger: {
+          trigger: flake.closest('section'),
+          toggleActions: 'play pause resume pause',
+        },
         // ease: 'none'
       }
     )

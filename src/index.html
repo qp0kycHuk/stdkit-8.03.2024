@@ -215,10 +215,128 @@
     <div class="postcard-title title text-center">
       Новогоднюю открытку!
     </div>
-    <div class="postcard-image">
+    <form class="postcard-image">
+      <div class="postcard-logo postcard-logo-1">
+        <img src="img/white-logo.svg" alt="">
+      </div>
+      <div class="postcard-logo postcard-logo-2">
+        <img src="img/white-logo.svg" alt="">
+      </div>
+      <div class="postcard-logo postcard-logo-3">
+        <img src="img/white-logo.svg" alt="">
+      </div>
+      <div class="postcard-dragon postcard-dragon-1">
+        <img src="img/dragon-1.svg" alt="">
+      </div>
+      <div class="postcard-dragon postcard-dragon-2">
+        <img src="img/dragon-2.svg" alt="">
+      </div>
+      <div class="postcard-left">
+        <img src="img/postcard-left.svg" alt="">
+      </div>
+      <div class="postcard-top">
+        <img src="img/postcard-top.svg" alt="">
+      </div>
+      <div class="postcard-right">
+        <img src="img/postcard-right.svg" alt="">
+      </div>
+      <div class="postcard-bottom">
+        <img src="img/postcard-bottom.svg" alt="">
+      </div>
+      <div class="postcard-snowflakes">
+        <%= _.template(require('./html-includes/postcard-snoflakes.html').default)() %>
+      </div>
 
+      <div class="postcard-image-title relative">
+        Ё-моё, с Новым годом, коллеги!
+      </div>
+      <div class="postcard-image-subtitle relative mt-6">Напишите, от кого открытка</div>
+      <input required type="text" class="postcard-image-input input relative mt-4 text-center italic" placeholder="например, ООО Лучшая компания на свете">
+      <button type="submit" class="btn btn-gradient postcard-image-btn relative mt-6 font-bold px-10 rounded-xl">Скачать открытку</button>
+    </form>
+  </section>
+
+  <section class="feedback">
+    <div class="feedback-snowflakes feedback-snowflakes-1">
+      <%= _.template(require('./html-includes/feedback-left.html').default)() %>
+    </div>
+    <div class="feedback-snowflakes feedback-snowflakes-2">
+      <%= _.template(require('./html-includes/feedback-right.html').default)() %>
+    </div>
+    <div class="feedback-subtitle subtitle text-center">Также вы можете</div>
+    <div class="feedback-title title text-center">
+      Поздравить Студию К.И.Т
+    </div>
+    <form class="feedback-form">
+      <label class="w-full block">
+        <div class="font-semibold mb-3">От кого</div>
+        <input type="text" class="input w-full rounded-xl" placeholder="например, ООО Лучшая компания на свете">
+      </label>
+      <label class="w-full block mt-5">
+        <div class="font-semibold mb-3">Поздравление</div>
+        <textarea class="input w-full rounded-xl h-56" placeholder="Напишите поздравление..."></textarea>
+      </label>
+      <button class="btn btn-gradient font-bold rounded-xl w-full mt-5" type="submit">Отправить</button>
+
+      <div class="text-center mt-5 opacity-80 max-sm:text-sm">
+        Отправляя поздравление вы даете согласие на то, чтобы
+        прочитавший его почувствовал радость и ваше тепло
+      </div>
+    </form>
+  </section>
+
+  <section class="reviews">
+    <div class="reviews-title title text-center">
+      Ваши прекрасные поздравления
+    </div>
+
+    <div class="reviews-slider swiper fade-in-down" data-scroll>
+      <div class="swiper-wrapper">
+        <% for(let i=0; i < 12; i++){ %>
+        <div class="swiper-slide px-2 sm:px-3">
+          <div class="reviews-item">
+            <div class="flex items-center mb-5 md:mb-10">
+              <img src="img/avatar-1.png" alt="" class="d-block mr-5">
+              <div class="text-sm md:text-xl font-bold">Ирина Новикова</div>
+            </div>
+            <div class="leading-normal text-xs md:text-base">
+              Пусть в новом году вам сопутствует удача, успех и достаток. Наслаждайтесь каждым мгновением вашей жизни,
+              будьте с любимыми, окружайте себя и своих близких теплом и заботой, согревайте их своей любовью, а они в
+              ответ согреют вас. Будьте счастливы, с Новым годом!
+
+              И кстати. Сделайте пожалуйста баннер
+              с акцией, тз пока нет, вы сделайте, а мы посмотрим и тогда составим
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
     </div>
   </section>
+
+
+  <section class="footer">
+    <%= _.template(require('./html-includes/footer-snowflakes.html').default)() %>
+    <div class="footer-subtitle text-center subtitle">В свою очередь, вся наша команда</div>
+    <div class="footer-title text-center title">
+      сердечно поздравляет вас
+      <div class="sm:-mt-6 max-sm:inline">с наступающим Новым Годом!</div>
+    </div>
+    <div class="max-sm:text-sm md:text-lg text-center mt-8">
+      Спасибо за бесценный опыт плодотворного сотрудничества, мы очень рады, <br class="max-sm:hidden">
+      что работаем вместе с вами. Искренне желаем дальнейшего процветания, успехов, <br class="max-sm:hidden">
+      счастья и улыбок. И пусть в следующем году у вас реализуются <br class="max-sm:hidden">
+      все грядущие стремления и начинания!
+    </div>
+
+    <%= _.template(require('./html-includes/footer-tree.html').default)() %>
+    <%= _.template(require('./html-includes/footer-santa.html').default)() %>
+    <div class="footer-gnomes">
+      <%= _.template(require('./html-includes/gnomes.html').default)() %>
+    </div>
+    <img src="img/footer-snow.svg" alt="" class="footer-snow">
+  </section>
+
 </body>
 
 </html>
