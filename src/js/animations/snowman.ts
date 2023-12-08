@@ -2,11 +2,10 @@ import gsap from 'gsap'
 import { randomInRange } from '../randomInRange'
 
 export function snowman() {
-  const options = {
+  const options: gsap.TweenVars = {
     yoyo: true,
     repeat: -1,
     ease: 'power1.inOut',
-    smoothOrigin: false,
     transformOrigin: '50% 50%',
     duration: 1.1,
     scrollTrigger: {
@@ -14,14 +13,14 @@ export function snowman() {
       toggleActions: 'play pause resume pause',
     },
   }
+  const moveMultiple = 2
+  const rotateMultiple = 1
 
   // left tree
   {
     const leftOptions: gsap.TweenVars = {
       ...options,
     }
-    const moveMultiple = 5
-    const rotateMultiple = 2
 
     gsap.fromTo(
       '.tree-path.tree-path-left.tree-path-top',
@@ -79,8 +78,6 @@ export function snowman() {
       ...options,
       delay: 0.1,
     }
-    const moveMultiple = 5
-    const rotateMultiple = 2
 
     gsap.fromTo(
       '.tree-path.tree-path-front.tree-path-top',
@@ -138,8 +135,6 @@ export function snowman() {
       ...options,
       delay: 0.2,
     }
-    const moveMultiple = 5
-    const rotateMultiple = 2
 
     gsap.fromTo(
       '.tree-path.tree-path-back.tree-path-top',
@@ -197,8 +192,6 @@ export function snowman() {
       ...options,
       delay: 0.3,
     }
-    const moveMultiple = 5
-    const rotateMultiple = 2
 
     gsap.fromTo(
       '.tree-path.tree-path-right.tree-path-top',

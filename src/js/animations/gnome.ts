@@ -2,7 +2,7 @@ import gsap from 'gsap'
 import { randomInRange } from '../randomInRange'
 
 export function gnome() {
-  const options = {
+  const options: gsap.TweenVars = {
     smoothOrigin: false,
     repeat: -1,
     yoyo: true,
