@@ -1,5 +1,5 @@
 function init() {
-  const deadline = new Date(new Date().getFullYear(), 0, 0)
+  const deadline = new Date(new Date().getFullYear() + 1, 0, 0)
   const timerId = setInterval(countdownTimer, 1000)
   const $days = document.getElementById('days')
   const $daysText = document.getElementById('days-text')
