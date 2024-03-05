@@ -10,49 +10,40 @@
 
 <body>
   <section class="started">
-    <div class="started-snowflakes">
-      <%= _.template(require('./html-includes/started-snowflakes.html').default)() %>
-    </div>
-    <div class="started-gifts">
-      <img src="img/started-gifts.svg" alt="">
-    </div>
-    <div class="started-snowman">
-      <%= _.template(require('./html-includes/snowman.html').default)() %>
-    </div>
-    <div class="started-gnomes">
-      <%= _.template(require('./html-includes/gnomes.html').default)() %>
+    <div class="started-clouds">
+
+      <img src="img/started-cloud-1.svg" alt="" class="started-cloud started-cloud-1">
+      <img src="img/started-cloud-1.svg" alt="" class="started-cloud started-cloud-2">
+      <img src="img/started-cloud-1.svg" alt="" class="started-cloud started-cloud-3">
+      <img src="img/started-cloud-2.svg" alt="" class="started-cloud started-cloud-4">
+      <img src="img/started-cloud-2.svg" alt="" class="started-cloud started-cloud-5">
+      <div class="started-sun animate-ping"></div>
+      <div class="started-sun "></div>
     </div>
 
+    <img src="img/started-flower-1.svg" alt="" class="started-flower started-flower-1  animate-bounce">
+    <img src="img/started-flower-2.svg" alt="" class="started-flower started-flower-2  animate-bounce">
+    <img src="img/started-flower-3.svg" alt="" class="started-flower started-flower-3  animate-bounce">
+    <img src="img/started-flower-4.svg" alt="" class="started-flower started-flower-4  animate-bounce">
+    <img src="img/started-flower-2.svg" alt="" class="started-flower started-flower-5  animate-bounce">
+    <img src="img/started-flower-3.svg" alt="" class="started-flower started-flower-6  animate-bounce">
 
-    <div class="started-cloud started-cloud-top">
-      <img src="img/started-cloud-top.svg" alt="">
-    </div>
-    <div class="started-cloud started-cloud-bottom started-cloud-bottom-1">
-      <img src="img/started-cloud-bottom-1.svg" alt="">
-    </div>
-    <div class="started-cloud started-cloud-bottom started-cloud-bottom-2">
-      <img src="img/started-cloud-bottom-2.svg" alt="">
-    </div>
-    <div class="started-cloud started-cloud-bottom started-cloud-bottom-3">
-      <img src="img/started-cloud-bottom-3.svg" alt="">
-    </div>
-    <div class="started-cloud started-cloud-bottom started-cloud-bottom-4">
-      <img src="img/started-cloud-bottom-4.svg" alt="">
-    </div>
+    <img src="img/started-grass.svg" alt="" class="started-grass">
+    <div class="started-ellipse"></div>
+    <img src="img/footer-dude.svg" alt="" class="started-dude">
+
 
     <div class="started-logo">
       <img src="img/started-logo.svg" alt="">
     </div>
-    <div class="started-subtitle subtitle">- Ну что, пора?</div>
+    <div class="started-subtitle subtitle">- А мы уже купили цветы нашим ми-ми-милым дамам?</div>
     <div class="started-title title">
-      - Пока нет, до Нового Года еще:
+      - Пока нет, до 8 марта еще:
     </div>
     <div class="started-timer timer">
       <div class="timer-item">
         <div class="timer-item-num">
-          <div class="timer-item-background">
-            <img src="img/timer-item-bg.svg" alt="">
-          </div>
+
           <div class="timer-item-value" id="days">33</div>
         </div>
         <div class="sm:mt-4 text-center">
@@ -62,9 +53,7 @@
       </div>
       <div class="timer-item">
         <div class="timer-item-num">
-          <div class="timer-item-background">
-            <img src="img/timer-item-bg.svg" alt="">
-          </div>
+
           <div class="timer-item-value" id="hours">33</div>
         </div>
         <div class="sm:mt-4 text-center">
@@ -74,9 +63,7 @@
       </div>
       <div class="timer-item">
         <div class="timer-item-num">
-          <div class="timer-item-background">
-            <img src="img/timer-item-bg.svg" alt="">
-          </div>
+
           <div class="timer-item-value" id="minutes">33</div>
         </div>
         <div class="sm:mt-4 text-center">
@@ -85,6 +72,7 @@
         </div>
       </div>
     </div>
+
   </section>
 
   <section class="recommendation">
@@ -94,13 +82,13 @@
           <img src="img/recommendation/1.jpg" alt="" class="absolute-fit object-cover">
         </div>
         <div class="recommendation-item-content">
-          <div class="lg:text-2xl font-bold">Отпустите</div>
-          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">ситуацию</div>
+          <div class="lg:text-2xl font-bold">Насладитесь</div>
+          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">весной</div>
           <div class="leading-normal mt-7 max-lg:text-sm">
-            Не успеваете закрыть дедлайны?
-            Убраться в спальне? Купить подарок?
-            Забейте! Новый год - это праздник,
-            а не голодные игры. Кайфуйте!
+            Работа, домашние дела и прочее -
+            отложите это на попозже, а в этот
+            замечательный день насладитесь
+            лучами солнца и ароматом весны!
           </div>
         </div>
       </div>
@@ -109,13 +97,12 @@
           <img src="img/recommendation/2.jpg" alt="" class="absolute-fit object-cover">
         </div>
         <div class="recommendation-item-content">
-          <div class="lg:text-2xl font-bold">Подумайте о своём</div>
-          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">здоровье</div>
+          <div class="lg:text-2xl font-bold">Проведите время на</div>
+          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">свежем воздухе</div>
           <div class="leading-normal mt-7 max-lg:text-sm">
-            Запланируйте дни под отдых
-            от нескончаемого праздника...
-            Чтобы потом снова нарушить свои
-            планы, как и в прошлом году
+            На улице солнечно, почти тепло, на душе
+            праздник, на календаре - выходной,
+            проведите его в приятной атмосфере
           </div>
         </div>
       </div>
@@ -124,13 +111,12 @@
           <img src="img/recommendation/3.jpg" alt="" class="absolute-fit object-cover">
         </div>
         <div class="recommendation-item-content">
-          <div class="lg:text-2xl font-bold">Коты ведь тоже</div>
+          <div class="lg:text-2xl font-bold">Радуйтесь</div>
           <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">как люди</div>
           <div class="leading-normal mt-7 max-lg:text-sm">
-            Купите побольше игрушек и повесьте
-            их пониже, чтобы ваш шерстяной тоже
-            смог в полной мере насладиться
-            атмосферой праздника
+            Праздник - отличный повод побаловать
+            себя! Ешьте все, что вам нравится, купите
+            яхту, этот день - ваш!
           </div>
         </div>
       </div>
@@ -142,9 +128,8 @@
           <div class="lg:text-2xl font-bold">Конечно, не забудьте</div>
           <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">украсить дом!</div>
           <div class="leading-normal mt-7 max-lg:text-sm">
-            Покупать игрушки в супермаркете это детский сад.
-            Сели и сделали что-то сами, независимо от того, оттуда
-            у вас растут руки или не оттуда!
+            Поставьте подаренные цветы в вазу, они придадут атмосферы
+            праздника и наполнят дом приятным ароматом
           </div>
         </div>
       </div>
@@ -156,9 +141,8 @@
           <div class="lg:text-2xl font-bold">Помните о главном, о своих</div>
           <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">любимых людях</div>
           <div class="leading-normal mt-7 max-lg:text-sm">
-            С кем бы вы хотели отпраздновать Новый год? С коллегами?
-            С друзьями? С семьей? С соседями? С котом и собакой?
-            Отлично! Цените и любите их
+            Проведите этот день с семьей и не забудьте поздравить
+            родственников, даже не самых приятных
           </div>
         </div>
       </div>
@@ -167,13 +151,11 @@
           <img src="img/recommendation/6.jpg" alt="" class="absolute-fit object-cover">
         </div>
         <div class="recommendation-item-content">
-          <div class="lg:text-2xl font-bold">Займитесь</div>
-          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">спортом</div>
+          <div class="lg:text-2xl font-bold">Весенний </div>
+          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">Спорт</div>
           <div class="leading-normal mt-7 max-lg:text-sm">
-            Чтобы не набрать вес после
-            праздников, скиньте его сейчас!
-            Освободите место для любимых
-            салатиков. Переиграно и уничтожено!
+            Да кому оно надо...
+            Сегодня праздник, отдыхайте!
           </div>
         </div>
       </div>
@@ -182,13 +164,11 @@
           <img src="img/recommendation/7.jpg" alt="" class="absolute-fit object-cover">
         </div>
         <div class="recommendation-item-content">
-          <div class="lg:text-2xl font-bold">Не забудьте</div>
-          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">погрустить!</div>
+          <div class="lg:text-2xl font-bold">А может</div>
+          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">день красоты?</div>
           <div class="leading-normal mt-7 max-lg:text-sm">
-            Психологи утверждают, что
-            это поможет организоваться
-            и самомотивироваться. Но это
-            не точно, лучше, конечно, веселиться!
+            Косметические процедуры - проведите
+            праздник с удовольствием
           </div>
         </div>
       </div>
@@ -197,13 +177,11 @@
           <img src="img/recommendation/8.jpg" alt="" class="absolute-fit object-cover">
         </div>
         <div class="recommendation-item-content">
-          <div class="lg:text-2xl font-bold">Следите</div>
-          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">за временем</div>
+          <div class="lg:text-2xl font-bold">Весенняя </div>
+          <div class="font-alt text-4xl lg:text-5xl font-medium -mt-2">уборка</div>
           <div class="leading-normal mt-7 max-lg:text-sm">
-            Не позвольте предновогодней
-            суматохе заставить вас нарушить
-            традиции и пропустить самое главное!
-            Шампанского всем!
+            отличный момент чтобы выбросить
+            новогоднюю елку
           </div>
         </div>
       </div>
@@ -211,64 +189,28 @@
   </section>
 
   <section class="postcard">
-    <div class="postcard-subtitle subtitle text-center">Мы сделали для ваших клиентов</div>
+    <div class="postcard-subtitle subtitle text-center">Мы сделали для ваших дам</div>
     <div class="postcard-title title text-center">
-      Новогоднюю открытку!
+      Праздничную открытку!
     </div>
     <form class="postcard-image">
-      <div class="postcard-logo postcard-logo-1">
-        <img src="img/white-logo.svg" alt="">
-      </div>
-      <div class="postcard-logo postcard-logo-2">
-        <img src="img/white-logo.svg" alt="">
-      </div>
-      <div class="postcard-logo postcard-logo-3">
-        <img src="img/white-logo.svg" alt="">
-      </div>
-      <div class="postcard-dragon postcard-dragon-1">
-        <img src="img/dragon-1.svg" alt="">
-      </div>
-      <div class="postcard-dragon postcard-dragon-2">
-        <img src="img/dragon-2.svg" alt="">
-      </div>
-      <div class="postcard-left">
-        <img src="img/postcard-left.svg" alt="">
-      </div>
-      <div class="postcard-top">
-        <img src="img/postcard-top.svg" alt="">
-      </div>
-      <div class="postcard-right">
-        <img src="img/postcard-right.svg" alt="">
-      </div>
-      <div class="postcard-bottom">
-        <img src="img/postcard-bottom.svg" alt="">
-      </div>
-      <div class="postcard-snowflakes">
-        <%= _.template(require('./html-includes/postcard-snoflakes.html').default)() %>
-      </div>
-
       <div class="postcard-image-title relative">
-        Ё-моё, с Новым годом, коллеги!
+        С 8 марта, ми-<span class="text-primary">ми-</span>милые дамы!
       </div>
       <div class="font-alt font-medium opacity-80 text-2xl">
-        С пожеланием успехов в работе и отдыхе
+        С пожеланием успехов в работе и отдыхе!
       </div>
       <div class="postcard-image-subtitle relative mt-8">Напишите, от кого открытка</div>
       <input required type="text" class="postcard-image-input input relative mt-4 text-center italic" placeholder="например, ООО Лучшая компания на свете">
-      <button type="submit" class="btn btn-gradient postcard-image-btn relative mt-6 font-bold px-10 rounded-xl">Скачать открытку</button>
+      <button type="submit" class="btn btn-primary btn-fill postcard-image-btn relative mt-6 font-bold px-10 rounded-xl">Скачать открытку</button>
     </form>
   </section>
 
   <section class="feedback">
-    <div class="feedback-snowflakes feedback-snowflakes-1">
-      <%= _.template(require('./html-includes/feedback-left.html').default)() %>
-    </div>
-    <div class="feedback-snowflakes feedback-snowflakes-2">
-      <%= _.template(require('./html-includes/feedback-right.html').default)() %>
-    </div>
     <div class="feedback-subtitle subtitle text-center">Также вы можете</div>
-    <div class="feedback-title title text-center">
-      Поздравить Студию К.И.Т
+    <div class="feedback-title title text-center leading-none">
+      Поздравить ми-ми-милых дам <br>
+      Студии К.И.Т
     </div>
     <form class="feedback-form">
       <label class="w-full block">
@@ -279,9 +221,9 @@
         <div class="font-semibold mb-3">Поздравление</div>
         <textarea class="input w-full rounded-xl h-56" placeholder="Напишите поздравление..."></textarea>
       </label>
-      <button class="btn btn-gradient font-bold rounded-xl w-full mt-5" type="submit">Отправить</button>
+      <button class="btn btn-primary btn-fill font-bold rounded-xl w-full mt-5" type="submit">Отправить</button>
 
-      <div class="text-center mt-5 opacity-80 max-sm:text-sm">
+      <div class="text-center mt-5 opacity-80 text-sm">
         Отправляя поздравление вы даете согласие на то, чтобы
         прочитавший его почувствовал радость и ваше тепло
       </div>
@@ -319,25 +261,25 @@
 
 
   <section class="footer">
-    <%= _.template(require('./html-includes/footer-snowflakes.html').default)() %>
-    <div class="footer-subtitle text-center subtitle">В свою очередь, вся наша команда</div>
-    <div class="footer-title text-center title">
-      сердечно поздравляет вас
-      <div class="sm:-mt-6 max-sm:inline">с наступающим Новым Годом!</div>
-    </div>
-    <div class="max-sm:text-sm md:text-lg text-center mt-8">
-      Спасибо за бесценный опыт плодотворного сотрудничества, мы очень рады, <br class="max-sm:hidden">
-      что работаем вместе с вами. Искренне желаем дальнейшего процветания, успехов, <br class="max-sm:hidden">
-      счастья и улыбок. И пусть в следующем году у вас реализуются <br class="max-sm:hidden">
-      все грядущие стремления и начинания!
-    </div>
 
-    <%= _.template(require('./html-includes/footer-tree.html').default)() %>
-    <%= _.template(require('./html-includes/footer-santa.html').default)() %>
-    <div class="footer-gnomes">
-      <%= _.template(require('./html-includes/gnomes.html').default)() %>
+    <img src="img/footer-flower-1.svg" alt="" class="footer-flower footer-flower-1">
+    <img src="img/footer-flower-2.svg" alt="" class="footer-flower footer-flower-2">
+    <img src="img/footer-flower-3.svg" alt="" class="footer-flower footer-flower-3">
+    <img src="img/footer-flower-4.svg" alt="" class="footer-flower footer-flower-4">
+    <img src="img/footer-grass.svg" alt="" class="footer-grass">
+    <img src="img/footer-dude.svg" alt="" class="footer-dude">
+
+    <div class="footer-subtitle text-center subtitle relative">В свою очередь, вся наша команда</div>
+    <div class="footer-title text-center title relative">
+      сердечно поздравляет вас
+      <div class="sm:-mt-6 max-sm:inline"> с международным женским днем!</div>
     </div>
-    <img src="img/footer-snow.svg" alt="" class="footer-snow">
+    <div class="max-sm:text-sm md:text-lg text-center mt-8 relative">
+      Дорогие дамы, спасибо за бесценный опыт плодотворного сотрудничества, мы очень рады, <br class="max-sm:hidden">
+      что работаем вместе с вами. Искренне желаем дальнейшего процветания, успехов, <br class="max-sm:hidden">
+      счастья и улыбок. И пусть у вас реализуются все грядущие стремления и начинания!
+
+    </div>
   </section>
 
 

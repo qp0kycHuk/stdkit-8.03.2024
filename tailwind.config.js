@@ -30,7 +30,7 @@ module.exports = {
       xl: 1230 + 'px',
     },
     colors: {
-      primary: '#b71540',
+      primary: '#EA217A',
       sec: '#CE9B44',
       blue: '#2980b9',
       red: '#c0392b',
