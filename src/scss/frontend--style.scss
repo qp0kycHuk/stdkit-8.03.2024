@@ -860,3 +860,168 @@ body:not(.loaded) .started {
     }
   }
 }
+
+
+.header {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  padding-top    : 42px;
+
+  @media (max-width:theme('screens.md')) {
+    padding-top: 16px;
+  }
+
+  &-logo {
+    @media (max-width:theme('screens.sm')) {
+      width: 100px;
+    }
+  }
+
+  &-sign {
+    @media (max-width:theme('screens.sm')) {
+      width: 100px;
+    }
+  }
+
+  &-phone {
+    @media (max-width:theme('screens.sm')) {
+      width: 180px;
+    }
+  }
+}
+
+.plug-started {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  position      : relative;
+  text-align    : center;
+  padding-top   : 286px;
+  flex-grow     : 1;
+  padding-bottom: 180px;
+
+  @media (max-width:theme('screens.md')) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width:theme('screens.sm')) {
+    padding-top: 330px;
+    margin-top : -44px;
+    overflow   : hidden;
+  }
+
+  @media (max-width:theme('screens.xs')) {
+    padding-bottom: 32px;
+    padding-top   : 304px;
+    overflow      : hidden;
+  }
+
+  @media (max-width:theme('screens.sm')) {
+    padding-top    : 220px;
+    padding-bottom : 200px;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+  }
+
+
+  &-title {
+    margin-bottom: 46px;
+
+    @media (max-width:theme('screens.sm')) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width:theme('screens.xl')) {
+      font-size: 50px;
+    }
+
+    @media (max-width:theme('screens.md')) {
+      font-size: 32px;
+    }
+  }
+
+  &-subtitle {
+    font-weight: 400;
+    font-size  : 20px;
+
+    @media (max-width:theme('screens.lg')) {
+      font-size: 16px;
+    }
+
+    @media (max-width:theme('screens.sm')) {
+      br {
+        display: none;
+      }
+    }
+
+    @media (max-width:theme('screens.xl')) {
+      font-size: 16px;
+    }
+
+    @media (max-width:theme('screens.md')) {
+      font-size: 14px;
+    }
+  }
+
+  &-img {
+    position      : absolute;
+    animation     : fly 6s ease infinite both;
+    pointer-events: none;
+
+    @media (max-width:theme('screens.md')) {
+      width: 180px;
+    }
+
+    @media (max-width:theme('screens.sm')) {
+      width: 120px;
+    }
+
+    &--1 {
+      top  : 280px;
+      right: calc(50% + 450px);
+
+      @media (max-width:theme('screens.xl')) {
+        right: calc(50% + 350px);
+
+      }
+
+      @media (max-width:theme('screens.md')) {
+        inset: auto auto 20px 20px
+      }
+    }
+
+    &--2 {
+      top : -40px;
+      left: calc(50% - 180px);
+
+      @media (max-width:theme('screens.md')) {
+        left: calc(50% - 90px);
+        top : 60px;
+      }
+
+      @media (max-width:theme('screens.sm')) {
+        left: calc(50% - 60px);
+        top : 100px;
+      }
+    }
+
+    &--3 {
+      top : 320px;
+      left: calc(50% + 420px);
+
+      @media (max-width:theme('screens.xl')) {
+        left: calc(50% + 320px);
+
+      }
+
+      @media (max-width:theme('screens.md')) {
+        inset: auto 20px 20px auto;
+
+      }
+    }
+  }
+
+
+}
