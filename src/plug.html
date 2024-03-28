@@ -58,7 +58,28 @@
     </div>
   </section>
 
-
+  <a href="https://stdkit.ru/" target="_blank" class="partner-link">
+    <img src="img/partner-link.svg" alt="" class="absolute inset-0 object-cover object-left h-full w-full " />
+    <img src="img/partner-link-click.svg" alt="" class="relative mr-4">
+    <div class="relative">
+      <div class="font-bold leading-none sm:text-lg">Хотите крутой сайт?</div>
+      <div class="max-sm:text-sm/none">Тогда вам сюда...</div>
+    </div>
+    <button class="btn btn-icon ml-auto btn-white btn-sm partner-link-close">
+      <svg class="icon text-xs text-white">
+        <use xlink:href="/img/icons.svg#cross" />
+      </svg>
+    </button>
+  </a>
+  <script>
+    const link = document.querySelector('.partner-link')
+    const closeBtn = document.querySelector('.partner-link-close')
+    closeBtn.addEventListener('click', (event) => {
+      event.preventDefault()
+      event.stopPropagation()
+      link.classList.add('partner-link-hidden')
+    })
+  </script>
 </body>
 
 </html>
